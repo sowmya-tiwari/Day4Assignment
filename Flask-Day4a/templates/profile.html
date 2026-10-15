@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Login Successful!</h1>
+        <p class="subtitle">Here are your account details</p>
+
+        <div class="details">
+            <p><strong>User ID:</strong> {{ user["id"] }}</p>
+            <p><strong>Name:</strong> {{ user["name"] }}</p>
+            <p><strong>Email:</strong> {{ user["email"] }}</p>
+        </div>
+
+        <a class="button" href="{{ url_for('logout') }}">
+            Logout
+        </a>
+    </div>
+
+</body>
+</html>
